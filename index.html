@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pricing Switcher</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Heebo:400,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="pricing">
+      <div class="pricing-slider">
+        <label class="form-slider">
+          <span>How many users do you have?</span>
+          <input
+            type="range"
+            value="1"
+            data-price-input='{
+                "0": "1",
+                "1": "2-4",
+                "2": "5-9",
+                "3": "10-24",
+                "4": "25+"                       
+              }'
+              id="rangePicker"
+          />
+        </label>
+        <div class="pricing-slider-value"></div>
+      </div>
+
+      <div class="pricing-items">
+        <div class="pricing-item"  id="basicItem">
+          <div class="pricing-item-inner">
+            <div class="pricing-item-content">
+              <div class="pricing-item-header">
+                <div class="pricing-item-title">Basic</div>
+                <div
+                  class="pricing-item-price"
+                  data-price-output='{
+                    "0": ["", "Free", ""],
+                    "1": ["$", "13", "/m"],
+                    "2": ["$", "17", "/m"],
+                    "3": ["$", "21", "/m"],
+                    "4": ["$", "25", "/m"]
+                  }'
+                >
+                  <span class="pricing-item-price-currency"></span>
+                  <span class="pricing-item-price-amount"></span>
+                  <span class="pricing-item-price-after"></span>
+                </div>
+              </div>
+              <div class="pricing-item-features">
+                <ul class="pricing-item-features-list">
+					
+                  <li class="is-checked"><div
+                  class="pricing-item-price"
+                  data-price-output='{
+                    "0": ["Demo text 1"],
+                    "1": ["Demo text 2"],
+                    "2": ["Demo text 3"],
+                    "3": ["Demo text 4"],
+                    "4": ["Demo text 5"]
+                  }'
+                >
+					  <span class="pricing-item-price-currency"></span>
+                  
+					  
+					  </div></li>
+					
+					
+					
+                  <li class="is-checked">Excepteur sint occaecat</li>
+                  <li class="is-checked">Excepteur sint occaecat</li>
+                  <li>Excepteur sint occaecat</li>
+                  <li>Excepteur sint occaecat</li>
+                </ul>
+              </div>
+            </div>
+            <div class="pricing-item-cta">
+              <a class="button" href="#">Buy Now</a>
+            </div>
+          </div>
+
+          <div class="not-applicable-mask" style="display: none;">
+            <div class="not-applicable-mask-text">
+              <h3>Not applicable</h3>
+            </div>
+          </div>
+        </div>
+		  
+		  
+		  
+        <div class="pricing-item" id="advancedItem">
+          <div class="pricing-item-inner">
+            <div class="pricing-item-content">
+              <div class="pricing-item-header">
+                <div class="pricing-item-title">Advanced</div>
+                <div
+                  class="pricing-item-price"
+                  data-price-output='{
+                      "0": ["$", "13", "/m"],
+                      "1": ["$", "17", "/m"],
+                      "2": ["$", "21", "/m"],
+                      "3": ["$", "25", "/m"],
+                      "4": ["$", "42", "/m"]
+                    }'
+                >
+                  <span class="pricing-item-price-currency"></span>
+                  <span class="pricing-item-price-amount"></span>
+                  <span class="pricing-item-price-after"></span>
+                </div>
+              </div>
+              <div class="pricing-item-features">
+                <ul class="pricing-item-features-list">
+                  <li class="is-checked">Excepteur sint occaecat</li>
+                  <li class="is-checked">Excepteur sint occaecat</li>
+                  <li class="is-checked">Excepteur sint occaecat</li>
+                  <li class="is-checked">Excepteur sint occaecat</li>
+                  <li class="is-checked">Excepteur sint occaecat</li>
+                </ul>
+              </div>
+            </div>
+            <div class="pricing-item-cta">
+              <a class="button" href="#">Buy Now</a>
+            </div>
+          </div>
+
+          <div class="not-applicable-mask" style="display: none;">
+            <div class="not-applicable-mask-text">
+              <h3>Not applicable</h3>
+            </div>
+          </div>
+        </div>
+		  
+		  
+		  <div class="pricing-item"  id="enterpriseItem">
+          <div class="pricing-item-inner">
+            <div class="pricing-item-content">
+              <div class="pricing-item-header">
+                <div class="pricing-item-title">Enterprise</div>
+                <div
+                  class="pricing-item-price"
+                  data-price-output='{
+                      "0": ["$", "22", "/m"],
+                      "1": ["$", "33", "/m"],
+                      "2": ["$", "42", "/m"],
+                      "3": ["$", "88", "/m"],
+                      "4": ["$", "105", "/m"]
+                    }'
+                >
+                  <span class="pricing-item-price-currency"></span>
+                  <span class="pricing-item-price-amount"></span>
+                  <span class="pricing-item-price-after"></span>
+                </div>
+              </div>
+              <div class="pricing-item-features">
+                <ul class="pricing-item-features-list">
+                  <li class="is-checked">Excepteur sint occaecat</li>
+                  <li class="is-checked">Excepteur sint occaecat</li>
+                  <li class="is-checked">Excepteur sint occaecat</li>
+                  <li class="is-checked">Excepteur sint occaecat</li>
+                  <li class="is-checked">Excepteur sint occaecat</li>
+                </ul>
+              </div>
+            </div>
+            <div class="pricing-item-cta">
+              <a class="button" href="#">Buy Now</a>
+            </div>
+          </div>
+
+          <div class="not-applicable-mask" style="display: none;">
+            <div class="not-applicable-mask-text">
+              <h3>Not applicable</h3>
+            </div>
+          </div>
+        </div>
+		  
+		  
+      </div>
+    </div>
+    <script src="pricing-slider.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+      $(document).on("change", "#rangePicker", function() {
+        var selectedVal = $(this).val();
+
+        if(selectedVal == 0) {
+          $("#basicItem .not-applicable-mask").show();
+          $("#advancedItem .not-applicable-mask").hide();
+          $("#enterpriseItem .not-applicable-mask").show();
+        } else if(selectedVal == 1) {
+          $("#basicItem .not-applicable-mask").hide();
+          $("#advancedItem .not-applicable-mask").hide();
+          $("#enterpriseItem .not-applicable-mask").show();
+        } else {
+          $("#basicItem .not-applicable-mask").hide();
+          $("#advancedItem .not-applicable-mask").hide();
+          $("#enterpriseItem .not-applicable-mask").hide();
+        }
+      })
+    </script>
+  </body>
+</html>
