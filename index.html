@@ -185,23 +185,36 @@
     <script src="pricing-slider.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
+
+      var defaultVal = $("#rangePicker").val();
+
+        if(defaultVal == 0) {
+          controlMast(true, false, true);
+        } else if(defaultVal == 1) {
+          controlMast(false, false, true);
+        } else {
+          controlMast(false, false, false);
+        }
+
       $(document).on("change", "#rangePicker", function() {
         var selectedVal = $(this).val();
 
         if(selectedVal == 0) {
-          $("#basicItem .not-applicable-mask").show();
-          $("#advancedItem .not-applicable-mask").hide();
-          $("#enterpriseItem .not-applicable-mask").show();
+          controlMast(true, false, true);
         } else if(selectedVal == 1) {
-          $("#basicItem .not-applicable-mask").hide();
-          $("#advancedItem .not-applicable-mask").hide();
-          $("#enterpriseItem .not-applicable-mask").show();
+          controlMast(false, false, true);
         } else {
-          $("#basicItem .not-applicable-mask").hide();
-          $("#advancedItem .not-applicable-mask").hide();
-          $("#enterpriseItem .not-applicable-mask").hide();
+          controlMast(false, false, false);
         }
       })
+
+      function controlMast(basic, advanced, enterprise)
+      {
+        basic?$("#basicItem .not-applicable-mask").show():$("#basicItem .not-applicable-mask").hide();
+        advanced?$("#advancedItem .not-applicable-mask").show():$("#advancedItem .not-applicable-mask").hide();
+        enterprise?$("#enterpriseItem .not-applicable-mask").show():$("#enterpriseItem .not-applicable-mask").hide();
+        return;
+      }
     </script>
   </body>
 </html>
